@@ -31,4 +31,24 @@ public class Pilha {
             return -1; // Retorna -1 para indicar que a pilha está vazia
         }
     }
+
+    // Método para espiar o elemento no topo da pilha sem removê-lo
+    public int top() {
+        if (topo >= 0) { // Verifica se a pilha não está vazia
+            return elementos[topo];
+        } else {
+            System.out.println("A pilha está vazia! Não há elemento no topo.");
+            return -1; // Retorna -1 para indicar que a pilha está vazia
+        }
+    }
+
+    // Método para verificar se a pilha está vazia
+    public boolean isEmpty() {
+        return topo == -1;
+    }
+
+    // Método para retornar o número de elementos na pilha
+    public int size() {
+        return topo + 1;
+    }
 }
