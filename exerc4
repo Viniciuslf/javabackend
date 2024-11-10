@@ -1,0 +1,74 @@
+1. Pilha
+Método push(int valor)
+
+    Complexidade de Tempo: O(1), pois estamos adicionando o elemento no topo da pilha, o que não requer percorrer os elementos.
+    Complexidade de Espaço: O(1), já que a operação push só requer o espaço para armazenar o novo elemento (um inteiro) a cada chamada.
+
+Método pop()
+
+    Complexidade de Tempo: O(1), pois remover o elemento do topo da pilha é uma operação direta, sem necessidade de percorrer a estrutura.
+    Complexidade de Espaço: O(1), porque estamos apenas removendo um elemento do topo, sem ocupar espaço adicional.
+
+2. Fila
+Método enqueue(int valor)
+
+    Complexidade de Tempo: O(1), pois a operação enqueue adiciona o elemento ao final da fila sem precisar percorrer a estrutura.
+    Complexidade de Espaço: O(1), já que estamos armazenando apenas um novo elemento a cada vez que enqueue é chamado.
+
+Método dequeue()
+
+    Complexidade de Tempo: O(1), pois a operação dequeue remove o elemento da frente da fila diretamente.
+    Complexidade de Espaço: O(1), porque estamos apenas removendo um elemento, sem necessidade de espaço adicional.
+
+Método rear()
+
+    Complexidade de Tempo: O(1), pois estamos apenas acessando o último elemento da fila, sem necessidade de percorrer a estrutura.
+    Complexidade de Espaço: O(1), pois não há alocação de espaço adicional.
+
+Método front()
+
+    Complexidade de Tempo: O(1), pois estamos apenas acessando o primeiro elemento da fila.
+    Complexidade de Espaço: O(1), pois não há alocação de espaço adicional.
+
+3. Lista Encadeada
+Método push(int valor)
+
+    Complexidade de Tempo: O(1), pois estamos adicionando o elemento no final da lista encadeada sem precisar percorrer toda a lista (considerando que temos referência direta para o final).
+    Complexidade de Espaço: O(1), já que a operação push só requer o espaço para armazenar o novo elemento.
+
+Método pop()
+
+    Complexidade de Tempo: O(n), pois, para remover o último elemento, precisamos percorrer a lista até o penúltimo nó.
+    Complexidade de Espaço: O(1), pois não há alocação adicional de espaço além da remoção do último nó.
+
+Método insert(int index, int valor)
+
+    Complexidade de Tempo: O(n), pois precisamos percorrer a lista até o índice especificado para inserir o novo elemento.
+    Complexidade de Espaço: O(1), pois estamos apenas alocando espaço para o novo elemento.
+
+Método remove(int index)
+
+    Complexidade de Tempo: O(n), pois precisamos percorrer a lista até o índice especificado para remover o elemento.
+    Complexidade de Espaço: O(1), já que estamos apenas removendo um elemento da lista.
+
+Método elementAt(int index)
+
+    Complexidade de Tempo: O(n), pois precisamos percorrer a lista até o índice especificado para retornar o elemento.
+    Complexidade de Espaço: O(1), já que estamos apenas acessando um elemento existente na lista.
+
+Resumo das Complexidades
+Estrutura	Método	Complexidade de Tempo	Complexidade de Espaço
+Pilha	push	O(1)	O(1)
+	pop	O(1)	O(1)
+Fila	enqueue	O(1)	O(1)
+	dequeue	O(1)	O(1)
+	rear	O(1)	O(1)
+	front	O(1)	O(1)
+Lista Encadeada	push	O(1)	O(1)
+	pop	O(n)	O(1)
+	insert	O(n)	O(1)
+	remove	O(n)	O(1)
+	elementAt	O(n)	O(1)
+Justificativa
+
+Essas complexidades refletem a natureza das operações em estruturas de dados lineares. Na pilha e fila, as operações são de tempo constante porque adicionamos ou removemos elementos em posições específicas (topo para pilha e frente/traseira para fila). Já na lista encadeada, algumas operações como pop e elementAt podem ter complexidade O(n) porque precisamos percorrer os nós para acessar ou modificar elementos em posições específicas, especialmente quando a referência ao final ou a um índice intermediário não é direta.
