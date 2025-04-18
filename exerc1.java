@@ -9,7 +9,7 @@ public class Pilha {
 
     
     public void push(int valor) {
-        if (topo < elementos.length - 1) { // Verifica se há espaço na pilha
+        if (topo < elementos.length - 1) { 
             topo++;
             elementos[topo] = valor;
             System.out.println("Elemento " + valor + " empilhado.");
