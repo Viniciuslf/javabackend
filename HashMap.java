@@ -82,16 +82,16 @@ class HashMap {
             }
             current = current.next;
         }
-        return -1; // Retorna -1 se a chave não for encontrada
+        return -1; 
     }
 
-    // Remove todos os elementos do mapa
+    
     public void clear() {
         map = new HashNode[10];
         size = 0;
     }
 
-    // Retorna o tamanho atual do mapa
+    
     public int size() {
         return size;
     }
