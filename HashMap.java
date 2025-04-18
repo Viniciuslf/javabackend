@@ -19,12 +19,12 @@ class HashMap {
         size = 0;
     }
 
-    // Função hash simples
+    
     private int hash(int key) {
         return key % 10;
     }
 
-    // Adiciona o par chave/valor ao mapa
+    
     public void put(int key, int value) {
         int index = hash(key);
         HashNode newNode = new HashNode(key, value);
@@ -32,11 +32,11 @@ class HashMap {
         if (map[index] == null) {
             map[index] = newNode;
         } else {
-            // Resolução de colisão por encadeamento
+            
             HashNode current = map[index];
             while (current != null) {
                 if (current.key == key) {
-                    // Substitui o valor se a chave já existir
+                   
                     current.value = value;
                     return;
                 }
@@ -49,8 +49,7 @@ class HashMap {
         }
         size++;
     }
-
-    // Remove o valor associado à chave e o retorna
+    
     public int delete(int key) {
         int index = hash(key);
         HashNode current = map[index];
