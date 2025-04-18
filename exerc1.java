@@ -2,13 +2,12 @@ public class Pilha {
     private int[] elementos;
     private int topo;
 
-    // Construtor para inicializar a pilha com um tamanho fixo
     public Pilha(int tamanho) {
         elementos = new int[tamanho];
-        topo = -1; // Indica que a pilha está vazia
+        topo = -1; 
     }
 
-    // Método para adicionar um elemento no topo da pilha
+    
     public void push(int valor) {
         if (topo < elementos.length - 1) { // Verifica se há espaço na pilha
             topo++;
