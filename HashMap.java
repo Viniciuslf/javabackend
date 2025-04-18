@@ -68,10 +68,10 @@ class HashMap {
             prev = current;
             current = current.next;
         }
-        return -1; // Retorna -1 se a chave não for encontrada
+        return -1; 
     }
 
-    // Retorna o valor associado à chave
+    
     public int get(int key) {
         int index = hash(key);
         HashNode current = map[index];
